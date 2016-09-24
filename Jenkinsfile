@@ -1,4 +1,4 @@
-node('local-node') {
+node('newnode') {
     stage 'CI'
     sh 'ping gerrit.plumgrid.com'
     echo "aurora build"
