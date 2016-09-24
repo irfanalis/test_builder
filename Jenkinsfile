@@ -1,7 +1,8 @@
 node('newnode') {
     stage 'CI'
-    sh 'ping gerrit.plumgrid.com'
-    echo "aurora build"
+    sh 'aurora ls project'
     stage 'pipeline'
-    echo "aurora pipline"
+    sh "aurora ls build"
+    stage 'cleanup'
+    sh "aurora ls instances"
 }
